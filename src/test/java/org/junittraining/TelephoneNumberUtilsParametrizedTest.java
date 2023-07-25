@@ -13,9 +13,13 @@ import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
 public class TelephoneNumberUtilsParametrizedTest {
+	
 	@Parameters
 	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][] { { "+3617654321", true }, { "+3232323232", false } });
+		return Arrays.asList(new Object[][] { 
+			{ "+3617654321", true }, 
+			{ "+3232323232", false } 
+		});
 	}
 	
 	@Parameter(value = 0)
