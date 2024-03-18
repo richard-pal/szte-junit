@@ -30,7 +30,7 @@ public class TelephoneNumberUtilsParametrizedTest {
 	@Test
 	public void testPhoneNumber() {
 		TelephoneNumberUtils util = new TelephoneNumberUtils();
-		System.out.println("Checkig now " + telephoneNumber);
+		System.out.println("Checking now " + telephoneNumber);
 		boolean actual = util.isBudapestLandline(telephoneNumber);
 		assertThat(actual, is(isBudapestLandline));
 	}
