@@ -44,13 +44,35 @@ To save time, these checks are not implemented repetitively with if-else-throw..
 
 See the `CalculatorTest...` files for examples of the different approaches.
 
-### How to run the example code of this repository?
+### How to run the example test code of this repository?
 
-1. In Eclipse, use `File/Import/Maven/Existing Maven Projects` to import the project from your local filesystem
+#### With Eclipse
+
+1. use `File/Import/Maven/Existing Maven Projects` to import the project from your local filesystem
 
 2. Wait, till all Java dependencies are downloaded
 
 3. Right click on the test package or on the individual test class under the test package, and select `Run as/JUnit test`
+
+#### with VSCode
+
+1. install the `Extension Pack for Java`
+
+2. Wait, till all Java dependencies are downloaded (status bar shows: "Java: Ready")
+
+3. In the Unit test file's editor, use the "play" icon left to the test class and the test functions.
+
+4. Locate the "Testing" view. Locate the test package or a test class and use the "play" icon to execute the tests. 
+
+#### with IntelliJ Idea
+
+1. Import the extracted folder as a Maven project
+
+2. Wait, till all Java dependencies are downloaded (watch the status bar)
+
+3. In the Unit test file's editor, use the "play" icon left to the test class and the test functions.
+
+4. In the Project browser view, locate the src/test/java package or a test class, rightclick and use the "Run tests" feature to execute the tests. 
 
 
 ### What is the Test-Driven-Development approach?
