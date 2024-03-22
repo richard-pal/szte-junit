@@ -96,6 +96,18 @@ broke
 6. continue the development according to the cycle
 
 
+### How to remove code-dependencies during testing a class?
+
+The scope of a unit test is restricted to **one** class (or ideally **one** method).
+
+However, most classes call other classes' functionality. To eliminate that complexity in tests and to
+prevent the "side-effects" of those classes, we simply replace these dependencies during the test with
+some dummy implementation (we call them "mocks"). Mocked functions return whatever we intend to have during the testcase execution.
+
+It is a common strategy to simulate different cases with these mocks (like returning different values,
+throwing Exception, etc. in the replaced functions).
+
+Using mocks in tests also facilitate Test-Driven-Development and helps in situations when we have do coding+testing work that relies on classes/interfaces that are not yet implemented.
 
 ### What is test-code-coverage?
 
@@ -116,7 +128,7 @@ Look into the `org.junittraining.exercise` packages.
 2. Plan the tests for this interface. Consider as many usecases and patterns with different inputs as possible to achieve a complete coverage.
 3. Implement the test according to your plans
 4. Execute the tests on the dummy implementation `IPAddressCalculationsHorribleImpl`
-5. Summarize the issues you have found with your tests
+5. Summarize the issues you have found with your tests (test report)
 6. Repoint your tests to execute on the yet empty `IPAddressCalculationsImpl` implementation
 7. Start the implementation in this class, and meanwhile execute your tests repeatedly to see how you are progressing. 
 8. You are done if all your tests pass. 
