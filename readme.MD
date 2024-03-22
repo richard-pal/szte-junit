@@ -107,7 +107,7 @@ some dummy implementation (we call them "mocks"). Mocked functions return whatev
 It is a common strategy to simulate different cases with these mocks (like returning different values,
 throwing Exception, etc. in the replaced functions).
 
-Using mocks in tests also facilitate Test-Driven-Development and helps in situations when we have do coding+testing work that relies on classes/interfaces that are not yet implemented.
+Using mocks in tests also facilitate Test-Driven-Development and helps in situations when we have to do coding+testing work that relies on classes/interfaces that are not yet implemented.
 
 ### What is test-code-coverage?
 
