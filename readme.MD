@@ -2,9 +2,7 @@
 
 #### Unit testing...
 
-- validates that the individual units of source code are working properly
-- a Unit is the smallest testable part of an application.
-- in Java it is usually an individual function (or at most a class)
+- validates that the individual units of source code are working properly. A Unit is the smallest testable part of an application. In Java, it is usually an individual function (or at most a class)
 - is part of the development work
 - is a (tipically) automated test-type
 - performed as a white-box testing
@@ -12,17 +10,17 @@
 #### Benefits of Unit Testing
 
 - reduces test complexity:
-  - testing the smallest parts
-  - testing parts in isolation (by removing dependencies from other code parts)
+  - tests the smallest parts
+  - tests parts in isolation (by removing dependencies from other code parts)
 
-- test early:
+- tests "early":
   - even when the complete software is not yet ready
-  - detect unintended changes early (like breaking existing functionality when refactoring the
-    code/implementing new features)
+  - detects unintended changes early (like breaking existing functionality when refactoring the
+    existing code or when implementing new features)
 
-- test often:
+- tests "often":
   - unit tests are quick in execution
-  - unit test execution is automated therefore easily repeatable (even very frequently)
+  - unit test execution is automated, therefore easily repeatable (even very frequently)
   - unit tests fit nicely into the build process (Continuous Integration)
 
 ### What is JUnit?
@@ -36,11 +34,11 @@
 
 #### What are the Assertions?
 
-A Unit Test **must fail** if and only if the behaviour that is experienced during the test does not match with the expected one.
+A Unit Test **must fail** if and only if the behaviour that is experienced during the test does not match with the expected outcome.
 
-In practice the tested functions are called with a well-planned combination of test-input data and the returned value/exception is validated.
+In practice, the tested functions are called with a well-planned combination of test-input data (arguments) and the returned value/exception is validated (compared with the expected outcome).
 
-To save time, these checks are not implemented repetitively with if-else-throw... etc statements, but Assertion functions/frameworks are used.
+To save time, the validation checks are not implemented repetitively with if-else-throw... etc statements, but Assertion functions/frameworks are used instead.
 
 See the `CalculatorTest...` files for examples of the different approaches.
 
@@ -90,8 +88,7 @@ The Test-Driven Development cycle:
 1. first, add only the tests of the new feature
 2. the new tests fail (as the feature is not yet implemented)
 3. write the code of the new feature
-4. all tests pass OK - confidence in the quality of the new feature + already existing code did not get
-broke
+4. when finally all tests pass OK - it results in confidence in the quality of the new feature + already existing code did not get broken
 5. clean up the growing codebase by refactoring the code (to help maintainability, readability)
 6. continue the development according to the cycle
 
@@ -101,11 +98,9 @@ broke
 The scope of a unit test is restricted to **one** class (or ideally **one** method).
 
 However, most classes call other classes' functionality. To eliminate that complexity in tests and to
-prevent the "side-effects" of those classes, we simply replace these dependencies during the test with
-some dummy implementation (we call them "mocks"). Mocked functions return whatever we intend to have during the testcase execution.
+prevent the "side-effects" of those classes, we simply replace these dependencies during the test with some dummy implementation (we call them "mocks"). Mocked functions return whatever we intend to have during the testcase execution.
 
-It is a common strategy to simulate different cases with these mocks (like returning different values,
-throwing Exception, etc. in the replaced functions).
+It is a common strategy to simulate different cases with these mocks (like returning different values, throwing Exception, etc. in the replaced functions).
 
 Using mocks in tests also facilitate Test-Driven-Development and helps in situations when we have to do coding+testing work that relies on classes/interfaces that are not yet implemented.
 
@@ -114,8 +109,7 @@ Using mocks in tests also facilitate Test-Driven-Development and helps in situat
 Via measuring the tests' “code coverage” you can determine which lines of the tested class got
 executed during the run of the unit tests.
 
-To visualize tested and untested code within your project
-code coverage tools are used (such as Emma or Cobertura).
+To visualize tested and untested code within your project code coverage tools are used (such as Emma or Cobertura).
 
 This helps to write better tests and to ensure that the most relevant parts of the code do not remain untested.
 
